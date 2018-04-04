@@ -1,0 +1,32 @@
+
+<div class="container-fluid">
+  <h1>Restaurant</h1>
+
+  <h3><%= @restaurant.name%></h3>
+  <p>
+    <ul>
+    <li><%=  @restaurant.address%></li>
+    <li><%=  @restaurant.category%></li>
+    <% if  @restaurant.phone_number %>
+      <li><%=  @restaurant.phone_number%></li>
+    <% else %>
+    <% end %>
+  </ul>
+  </p>
+  <h5>Reviews</h5>
+  <ul>
+    <% @restaurant.reviews.each do |re|  %>
+      <li><%= re.content %> | <%= re.rating %></li>
+      <% end %>
+  </ul>
+
+</div>
+
+<div class="container-fluid">
+
+</div>
+
+<div >
+  <button type="button" class="btn btn-dark"><%= link_to "Index",restaurants_path  %></button>
+  <button type="button" class="btn btn-secondary"><%= link_to "Add review", new_restaurant_review_path(@restaurant.id)  %></button>
+</div>

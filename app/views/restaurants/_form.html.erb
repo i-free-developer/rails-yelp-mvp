@@ -1,0 +1,17 @@
+
+
+
+<div class="form">
+  <%= simple_form_for(restaurant) do |a| %>
+    <%= a.label :name %>
+    <%= a.text_field :name %><br>
+    <%= a.label :category %>
+    <%= a.text_field :category %><br>
+    <%= a.label :address %>
+    <%= a.text_field :address %><br>
+    <%= a.label :phone_number %>
+    <%= a.text_field :phone_number %><br>
+    <%= a.submit value="Submit", class: "btn btn-primary"%>
+  <% end %>
+</div>
+

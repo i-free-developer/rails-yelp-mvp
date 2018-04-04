@@ -1,0 +1,17 @@
+
+
+<div class="container-fluid">
+  <h2>Restaurants</h2>
+
+  <% @restaurants.each do |r| %>
+    <h4><%= r.name %></h4>
+    <h5><%= link_to r.address, restaurant_path(r.id) %> | <%= link_to "Edit", edit_restaurant_path(r.id) %> | <%= link_to "Delete", restaurant_path(r.id), method: :delete, data: { confirm: "Delete it, really?"}%></h5>
+  <% end %>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary"><%= link_to "Add",new_restaurant_path  %></button>
+  </div>
+</div>
+
+
+
+

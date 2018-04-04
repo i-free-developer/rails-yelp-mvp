@@ -1,0 +1,5 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content, label: "Please your review here"%>
+    <%= f.input :rating, as: :radio_buttons, collection: [0,1,2,3,4,5], class: "form-inline" %>
+    <%= f.submit "Add a review", class: "btn btn-primary" %>
+<% end %>
